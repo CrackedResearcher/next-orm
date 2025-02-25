@@ -1,12 +1,21 @@
 {
   "name": "next-orm",
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "dev": "bun run --hot src/index.ts",
+    "db:gen": "npx drizzle-kit generate",
+    "db:mig": "npx drizzle-kit migrate",
+    "db:studio": "drizzle-kit studio",
+    "db:push": "npx drizzle-kit push"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.39.3",
     "hono": "^4.7.2"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "drizzle-kit": "^0.30.4",
+    "tsx": "^4.19.3"
   }
 }
