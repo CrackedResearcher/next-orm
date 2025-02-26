@@ -3,3 +3,9 @@ export type UserData  = {
     email: string;
     password: string;
 }
+
+export type SignupResponse = {
+    name: string;
+    email: string;
+    id: string;
+}
