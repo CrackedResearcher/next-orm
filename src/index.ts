@@ -6,8 +6,12 @@ import { fileTable, userTable } from './db/schema';
 import { fileType } from './types/fileType';
 import { Context } from 'hono';
 import { authMiddleware, signJwt } from './utils/jwt';
+import productRoutes from './routes/products/index'
 
 const app = new Hono()
+
+app.route('/products', productRoutes)
+
 
 app.post("/signup", async (c: Context) => {
   const body = await c.req.json() as UserData;
